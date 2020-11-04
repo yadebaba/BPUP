@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# First Examples of here-doc
+# First Example of here-doc
 my $poem = <<"POEM";
     
     The coming of wisdom with time
