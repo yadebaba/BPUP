@@ -4,7 +4,7 @@ use v5.10;
 
 # Numbers in different numeral systems can be used literally in Perl
 my $bin = 0b11111010;		# 250 in binary form
-my $oct = 0372;				# 250 in	octal form
+my $oct = 0372;				# 250 in octal form
 my $dec = -250;				# -250 in decimal form
 my $hex = 0xfa;				# 250 in hexadecimal form
 my $Hex = 0XfA;				# also 250 in hexadecimal form
