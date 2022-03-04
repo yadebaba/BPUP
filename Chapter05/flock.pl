@@ -1,10 +1,11 @@
 #!/usr/bin/perl
-open POEM, "< poem.txt" || die "Can't open poem.txt: $!";
-flock(POEM, 2) || die "Could not lock poem.txt: $!";
-print scalar localtime,"\n";
-print "The poem.txt is locked for reading by pid=$$.\n";
-sleep 30;
-flock(POEM, 8);
-print scalar localtime,"\n";
-print "The poem.txt is unlocked for reading by pid=$$.\n";
+use v5.10;
+open POEM, "< poem.txt" || die "$!";
+flock(POEM, 2) || die "$!";
+say scalar localtime;
+say "The file poem.txt is locked for reading by pid=$$.";
+sleep 20;
+flock(POEM, 8) || die "$!";
+say scalar localtime;
+say "Now poem.txt is unlocked for reading by pid=$$.";
 close POEM;
