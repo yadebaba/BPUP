@@ -1,3 +1,4 @@
+#!/usr/bin/perl -w                                      # camel code
 use strict;
 
                                            $_='ev
