@@ -67,5 +67,3 @@ paper:
 Tsodikov, O. V., Record, M. T. Jr. and Sergeev, Y. V. (2002). A novel computer program 
 for fast exact calculation of accessible and molecular surface areas and average surface 
 curvature. J. Comput. Chem., 23, 600-609. 
-
-
