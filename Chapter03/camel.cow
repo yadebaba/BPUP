@@ -1,6 +1,7 @@
 # By Jian Huang <hj@uestc.edu.cn>
 # BPUP: Bioinformatics Programming Using Perl
 # Just for fun
+
 $the_cow = <<EOC;
   $thoughts
    $thoughts
