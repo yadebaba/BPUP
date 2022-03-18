@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-
 use v5.10;
 
 # Numbers in different numeral systems can be used literally in Perl
