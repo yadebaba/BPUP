@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-
 use v5.10;
 
 # create, assign and print lists and arrays
