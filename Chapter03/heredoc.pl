@@ -9,13 +9,13 @@ my $poem = <<"POEM";
     Though leaves are many, the root is one;
     Through all the lying days of my youth.
     I swayed my leaves and flowers in the sun;
-    Now I may wither into the truth!
-    
+    Now I may wither into the truth!    
     
 POEM
 
 # Second Example of here-doc
 my $perl_poem = <<'PERLPOEM';
+    
     The Perl Version of "the coming of wisdom with time"
                                      --- by Wayne Myers
 
