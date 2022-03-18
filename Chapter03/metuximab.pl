@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 use v5.10;
+
 #hash for amino acid code converting
 my %AA123 = (
 	A => 'Ala', V => 'Val', L => 'Leu', I => 'Ile',
