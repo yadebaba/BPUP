@@ -6,4 +6,3 @@ use diagnostics;
 # My first Perl script
 print "Hello Perl!\n";
 warn "Powered by Eclipse-EPIC IDE!\n";
-
