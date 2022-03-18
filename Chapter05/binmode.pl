@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-
 # Working with a binary file on Windows system
 # the binmode call or :raw layer is necessary  
 
