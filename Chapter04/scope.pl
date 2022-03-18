@@ -37,4 +37,3 @@ our $species = 'homo sapiens';
 
 say "Outside blocks, our \$species = $species";
 say "Outside blocks, \$::species = $main::species";
-
