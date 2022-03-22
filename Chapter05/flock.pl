@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 use v5.10;
+
 open POEM, "< poem.txt" || die "$!";
 flock(POEM, 2) || die "$!";
 say scalar localtime;
