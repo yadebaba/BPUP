@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 use v5.10;
 
-$g = "MH370";
+$g = "Perl";
 @g = qw(tom jerry);
 %g = (H=>1, O=>18);
 sub g {say "hello GLOB!";}
