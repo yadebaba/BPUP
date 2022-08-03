@@ -5,7 +5,7 @@ die "USAGE: ./sorfinder.pl genbankfile start min max\n" if (@ARGV!=4);
 my $file = shift;	# genome file in GenBank format
 my $start = shift;	# the start codon
 my $min = shift;	# minimum length of ORF 
-my $max =shift;		# maxium length of ORF
+my $max =shift;		# maximum length of ORF
 
 # make the rule ready
 my $rule = "$start(?:[ATGC]{3}(?<!TAG|TAA|TGA)){$min,$max}(?:TAG|TAA|TGA)";
