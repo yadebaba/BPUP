@@ -6,14 +6,13 @@ sub mymv {
     my ($dirpath,$oldext,$newext) = @_;
 
     return if not -d $dirpath;
-    opendir (my $dh, $dirpath) or die "Can't open $dirpath: $!";
+    opendir (my $dh, $dirpath) or die "Can't open $dirpath: $!\n";
     while (my $sub = readdir $dh) {
         next if $sub eq '.' or $sub eq '..';
         my $old="$dirpath/$sub";
-        my $ext=substr $old, -3;
+        my ($base, $ext) = split /\./, $old;
         if ($ext eq $oldext){
-            my $new = $old;
-            substr $new,-3, 3, $newext;
+            my $new = $base.".$newext";
             `mv $old $new`;
             print "$old is renamed to $new\n";
         }
@@ -21,4 +20,4 @@ sub mymv {
     }
     close $dh;
     return;
-}
+} 
