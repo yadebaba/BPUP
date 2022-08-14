@@ -111,7 +111,7 @@ sub findpatches{
 				push @patch, $bpos; 
 			}
 		}
-		my $apos = A321($resa->[0]);
+		#my $apos = A321($resa->[0]);
 		#say "$apos: [@patch]";
 		$patches{$resa->[0]} = [@patch];	
 	}
