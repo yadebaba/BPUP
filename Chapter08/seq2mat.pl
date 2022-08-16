@@ -31,5 +31,5 @@ sub seq2mat{
 
 sub checkseq{
 	my $seq = shift;
-	die "Illegal residue!\n" if !/[ACDEFGHIKLMNPQRSTVWY\s\v]/;
+	die "Illegal residue!\n" if $seq =~/[^ACDEFGHIKLMNPQRSTVWY]/;
 }
