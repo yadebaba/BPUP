@@ -16,6 +16,9 @@ my $scorecut = 0.5;
 
 GetOptions ("mimoseq=s" => \$mimoseq,
             "pdbfile=s" => \$pdbfile,
+            "asacutoff:f" => \$asacutoff,
+            "atom:s" => \$atom,
+            "scorecut:f" => \$scorecut,
             "help"  => \&help,			
             "version"  => \&version)
 or die "\n";
