@@ -1,4 +1,5 @@
 package Library;
+
 sub new {
 	my $class = shift;
 	my ($name, $length, $codescheme)= @_;
@@ -21,7 +22,6 @@ sub set_data{
 sub display{
 	my $self = shift;
 	my @args = @_;
-		
 	foreach my $field (@args){
 		print $self->{$field}, "\t";
 	}
