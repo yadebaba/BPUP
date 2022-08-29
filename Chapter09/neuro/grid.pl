@@ -62,7 +62,7 @@ my $usage=<<USAGE;
 Usage:
 Example: perl grid.pl -i infile
 
--i infile   		- Necessary. The scaled feature set of training data, 
+-i infile   		- Necessary. The feature set of training data, 
                 	  the row number is the size of training sets.  
                 	  Each row is "lable feature1 feature2 ...".
               
