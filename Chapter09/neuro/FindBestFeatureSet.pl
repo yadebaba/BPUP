@@ -19,8 +19,8 @@ my @feature=(<FILE>);
 close IN;
 close FILE;
 
-#create feature set one by one and
-#return optimum parameters's accuracy of n-fold cross-validation
+#create feature set one by one and return optimum 
+#parameters's accuracy of n-fold cross-validation
 for (my $i=0; $i<=$#sorted; $i++){
 	my $tmp=$i+1;
 	chomp($sorted[$i]);
@@ -42,16 +42,14 @@ for (my $i=0; $i<=$#sorted; $i++){
 		}
 		close TEMP;
 		close OUT;
-		unlink ("Feature$i.txt");
-		unlink ("Feature$i.scale");
-		unlink ("Feature$i.range");    
-	} 
+ 	} 
 	$command1="perl scale.pl -i Feature$tmp.txt -s Feature$tmp.range > Feature$tmp.scale";
 	$command2="perl grid.pl -i Feature$tmp.scale -v $n";
 	system ($command1);
 	system ($command2);
 }
-    
+# unlink glob "Feature*";
+
 sub USAGE {
 my $usage=<<USAGE;
 Usage:perl FindBestFeatureSet.pl -i infile -s sortfile -v 5
