@@ -17,14 +17,12 @@ open (FILE,"<$infile") || die "cannot open $infile\n";
 open (RESULT,">$resultfile") || die "cannot open $resultfile\n";
 while(<FILE>){
 	my @data=split(/\s/);
-	my $glabel = shift @data;
-	my $TestData = new Algorithm::SVM::DataSet(Label => "$glabel",
-											   Data => [@data]);
-	#$TestData->attribute($_, $data[$_]) for(1..$#data);
-	my $plabel = $svm->predict($TestData);
-	my $value = $svm->predict_value($TestData);
-	print RESULT "$glabel\t$plabel\t$value\n";
-}
+	my $TestData = new Algorithm::SVM::DataSet(Label => $data[0]);
+	$TestData->attribute($_, $data[$_]) for(1..$#data);
+	my $res1 = $svm->predict($TestData);
+	my $res2 = $svm->predict_value($TestData);
+	print RESULT "$data[0]\t$res1\t$res2\n";
+  }
 print "The result is saved as $resultfile in the current directory.\n";
 close FILE;
 close RESULT;
