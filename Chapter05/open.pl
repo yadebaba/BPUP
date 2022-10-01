@@ -2,7 +2,7 @@
 use v5.10;
 
 # open and print a poem of Yeats 
-open POEM, "poem.txt" || die "Can't open poem.txt: $!";
+open POEM, "poem.txt" || die "Can't open poem.txt: $!\n";
 print while <POEM>;
 close POEM;
 
@@ -18,12 +18,12 @@ my $mode;
 if (-T "mimotope.txt"){$mode = ">>";}else{$mode = ">";}
 
 open (my $fh, "$mode", "mimotope.txt") || 
-    die ("can't open mimotope.txt: $!");
+    die ("can't open mimotope.txt: $!\n");
 foreach my $file (@files){
 	if (open (FH, "<","$file")) {
 		while (<FH>){say $fh $_ if ($_!~/^>/);}
 	}else{
-		warn "Can't open $file: $!";
+		warn "Can't open $file: $!\n";
 	}
 	close FH;	
 }
