@@ -25,9 +25,9 @@ rewinddir $dh;
 say ("Position after rewind: ", telldir($dh), "\n"); 
 closedir $dh; 
        
-rename "decoy", "yot" or die $!; system ("tree");
-move "dir.txt", "./yot/ls.txt" or die $!; system ("tree");
-dircopy "yot", "decoy" or die $!; system ("tree");
-unlink "./decoy/ls.txt" or die $!; system ("tree");
-rmdir "decoy" or die $!; system ("tree");
+rename "decoy", "yot" or die "$!\n"; system ("tree");
+move "dir.txt", "./yot/ls.txt" or die "$!\n"; system ("tree");
+dircopy "yot", "decoy" or die "$!\n"; system ("tree");
+unlink "./decoy/ls.txt" or die "$!\n"; system ("tree");
+rmdir "decoy" or die "$!\n"; system ("tree");
 chdir ".."; rmtree ("toy");
