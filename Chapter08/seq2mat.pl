@@ -8,6 +8,7 @@ open(my $fh, $file) ;
 my @mat;
 while (<$fh>){
 	next if /^>/;
+	chomp;
 	checkseq ($_);
 	my $row = seq2mat ($_);
 	push @mat, $row;
